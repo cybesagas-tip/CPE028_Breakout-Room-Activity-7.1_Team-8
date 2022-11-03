@@ -1,5 +1,5 @@
 import unittest
-import mapquest_gui as mg
+import backend as mg
 
 class testMapQuest(unittest.TestCase):
     print('[Running Test Cases]\n')
@@ -18,6 +18,11 @@ class testMapQuest(unittest.TestCase):
         self.assertIsNotNone(convert)
         print(f"[Check API Call Tokyo To Kyoto]")
 
-    def test_gui(self):
-        self.assertIsNotNone(mg.MapQuest)
-        print("[Check GUI Initialization]")
+    def test_conversion_NYLA_normal(self):
+        convert = mg.conversionFunc('new york','los angeles','normal')
+        self.assertIsNotNone(convert)
+        print(f"[Check API Call Tokyo To Kyoto]")
+    def test_conversion_NYLA_down(self):
+        convert = mg.conversionFunc('new york','los angeles','down')
+        self.assertIsNotNone(convert)
+        print(f"[Check API Call Tokyo To Kyoto]")
