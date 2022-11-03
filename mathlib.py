@@ -24,3 +24,4 @@ def test_calc_multiply():
     assert output == 8
     print(output)
     
+test_calc_multiply()
